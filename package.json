@@ -1,0 +1,32 @@
+{
+  "name": "eau-gm-manager-mcp",
+  "version": "0.1.0",
+  "description": "Self-hosted MCP server that connects a Speediance Gym Monster account to Claude: review training history, browse the exercise library, and create or schedule custom workouts.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "eau-gm-manager-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "start": "node dist/index.js",
+    "login": "node dist/index.js login"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "~5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
